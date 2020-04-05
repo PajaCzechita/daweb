@@ -41,7 +41,7 @@ To hlavní, co je dobré si z tého sekce zapamatovat je, že HTML je pouze text
 
 ## DOM Elementy
 
-Když prohlížeč zpracovává HTML kód, každá značka a její obsah se převedou na takzvaný _DOM element_. Každý žlutá krabička na obrázku výše představuje jeden DOM element. Z hlediska JavaScriptu je důležité, že DOM elementy jsou nový typ hodnoty. Můžeme je tedy podobně jako čísla, řetězce nebo pravdivostní hodnoty ukládat do proměnných, předávat jako vstupy funkcím apod. Jak se ale k nějakému DOM elementu z naší stránky dostaneme? Poslouží nám k tomu funkce `document.querySelector`. Pro ukázku použití se vraťme k naší stránce s třemi kartami.
+Když prohlížeč zpracovává HTML kód, každá značka a její obsah se převedou na takzvaný _DOM element_. Každá žlutá krabička na obrázku výše představuje jeden DOM element. Z hlediska JavaScriptu je důležité, že DOM elementy jsou nový typ hodnoty. Můžeme je tedy podobně jako čísla, řetězce nebo pravdivostní hodnoty ukládat do proměnných, předávat jako vstupy funkcím apod. Jak se ale k nějakému DOM elementu z naší stránky dostaneme? Poslouží nám k tomu funkce `document.querySelector`. Pro ukázku použití se vraťme k naší stránce s třemi kartami.
 
 ```html
 <body>
@@ -92,7 +92,7 @@ Všimněte si hned dvou důležitých věcí. Za prvé, názvy CSS vlastností m
 > hlavicka.style.margin-bottom = '2rem'
 ```
 
-JavaScript by si pomlčku spletl s mínusem a kód by nefungoval. Druhá důležitá věc je, že hodnoty všech CSS vlastností se zapisují pomocí řetězců. Proto dávejte pozor například na takového chyby.
+JavaScript by si pomlčku spletl s mínusem a kód by nefungoval. Druhá důležitá věc je, že hodnoty všech CSS vlastností se zapisují pomocí řetězců. Proto dávejte pozor například na takovéto chyby.
 
 ```jscon
 > hlavicka.style.color = white
@@ -115,7 +115,7 @@ petElement.src = 'img/dog.jpg';
 petElement.alt = 'Pejsek';
 ```
 
-Vidíte, že díky DOMu si můžeme se stránkou hrát zcela dle libosti. Možná se vám už v hlavně rodí odvážné a nadšené nápady jaké úžasné stránky by se daly tatko vyrobit. Vraťme se však na chvilinku ještě k selektorům.
+Vidíte, že díky DOMu si můžeme se stránkou hrát zcela dle libosti. Možná se vám už v hlavně rodí odvážné a nadšené nápady jaké úžasné stránky by se daly takto vyrobit. Vraťme se však na chvilinku ještě k selektorům.
 
 ### Selektory
 
@@ -145,7 +145,7 @@ Jelikož lze v `document.querySelector` použít libovolný CSS selektor, někoh
 const cardElm = document.querySelector('.card:nth-child(2)');
 ```
 
-Tento kód bude skutečně fungovat, ale rovnou tedy na místě vám takové triky navždy zakazuju. Takovéto komplikované selektory používejte pouze v případě, že opravdu není vyhnutí. Pro nás existuje jednodušší řešení a to dát každé kartě unikátní `id`.
+Tento kód bude skutečně fungovat, ale rovnou tady na místě vám takové triky navždy zakazuju. Takovéto komplikované selektory používejte pouze v případě, že opravdu není vyhnutí. Pro nás existuje jednodušší řešení a to dát každé kartě unikátní `id`.
 
 ```html
 <body>
@@ -177,7 +177,7 @@ Oba z výše uvedených způsobů výběru podle `id` jsou zcela legitimní a je
 
 ## Vlastní funkce
 
-Funkce jsou jednou z nejdůležitějších součástí programování. Všimněte si, jak často vaše programy sestávají z volání různých funkcí. Ve všech programovacích jazycích je již od začátku mnoho funkcí rovnou k dispozici. Často ale potřebujeme funkci, která dělá něco specifického, důležitého pouze pro náš program. Představme si například, že vyměřujeme pozemek a chceme spočítat plochu pozemku, který má tvar pravoúhlého trojúhelníka o šířce ;;`width` a výšce `height` jako na obrázku.
+Funkce jsou jednou z nejdůležitějších součástí programování. Všimněte si, jak často vaše programy sestávají z volání různých funkcí. Ve všech programovacích jazycích je již od začátku mnoho funkcí rovnou k dispozici. Často ale potřebujeme funkci, která dělá něco specifického, důležitého pouze pro náš program. Představme si například, že vyměřujeme pozemek a chceme spočítat plochu pozemku, který má tvar pravoúhlého trojúhelníka o šířce `width` a výšce `height` jako na obrázku.
 
 ![Pozemek](assets/fields.svg)
 
@@ -211,7 +211,7 @@ landArea(5, 3);
 
 ### Složitější funkce
 
-Ne každá funkce je tak přímočará, jako výpočet obsahu. Často se stane, že potřebujeme ve funkci provést nějaké rozhodování, výpočet sestávají více kroků apod. Mějme například funkci, která nám vrátí absolutní hodnotu čísla. V takové funkci potřebujeme použít podmínky. Tělo funkce tedy bude obsahuje více příkazů a nevejde se nám na jeden řádek. V takovém případě může tělo funkce být blokem kódu podobně jako je to už známe u podmínek.
+Ne každá funkce je tak přímočará, jako výpočet obsahu. Často se stane, že potřebujeme ve funkci provést nějaké rozhodování, výpočet sestávají více kroků apod. Mějme například funkci, která nám vrátí absolutní hodnotu čísla. V takové funkci potřebujeme použít podmínky. Tělo funkce tedy bude obsahovat více příkazů a nevejde se nám na jeden řádek. V takovém případě může tělo funkce být blokem kódu podobně jako to už známe u podmínek.
 
 ```js
 const abs = (x) => {
